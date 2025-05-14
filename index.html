@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newcore Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="splash">
+        <h1 class="animate">مرحباً بك في <span class="highlight">Newcore</span></h1>
+    </div>
+
+    <div class="top-controls">
+        <select onchange="switchLang(this.value)">
+      <option value="ar">🇸🇦 العربية</option>
+      <option value="en">🇺🇸 English</option>
+    </select>
+        <button onclick="toggleTheme()">🌗</button>
+    </div>
+
+    <header>
+        <ul class="navbar">
+            <li onclick="showSection('landing')">الرئيسية</li>
+            <li onclick="showSection('rules')">قوانين المتجر</li>
+            <li onclick="showSection('projects')">أبرز الأعمال</li>
+            <li onclick="showSection('request')">طلب مبرمج</li>
+            <li onclick="showSection('contact')">تواصل معنا</li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="landing" class="page-section">
+            <div class="landing-content">
+                <img src="https://via.placeholder.com/150x150?text=Logo" class="logo" alt="Newcore Logo">
+                <h2>نقودك نحو المستقبل الرقمي</h2>
+            </div>
+        </section>
+
+        <section id="rules" class="page-section hidden">
+            <h2>قوانين المتجر</h2>
+            <ul>
+                <li>لا استرجاع بعد الدفع</li>
+                <li>التعديلات بعد التسليم حسب الاتفاق</li>
+                <li>احترام المواعيد يضمن أفضل جودة</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="page-section hidden">
+            <h2>أبرز الأعمال</h2>
+            <div class="grid">
+                <div class="project-box">
+                    <img src="https://via.placeholder.com/200x120" alt="عمل" />
+                    <p>اسم العمل</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="request" class="page-section hidden">
+            <h2>طلب مبرمج</h2>
+            <form id="requestForm">
+                <input type="email" id="email" placeholder="البريد الإلكتروني" required />
+                <input type="text" id="discord" placeholder="اسمك في ديسكورد" required />
+                <input type="text" id="phone" placeholder="رقم الجوال" required />
+                <textarea id="details" placeholder="تفاصيل الطلب" required></textarea>
+                <div class="form-buttons">
+                    <button type="submit">إرسال</button>
+                    <button type="reset">إلغاء</button>
+                </div>
+            </form>
+
+        </section>
+
+        <section id="contact" class="page-section hidden">
+            <h2>تواصل معنا</h2>
+            <div class="contact-box">
+                <p>📧 الإيميل: <a href="mailto:azooz98.2000@gmail.com">azooz98.2000@gmail.com</a></p>
+                <p>📞 الجوال: <a href="tel:0542791272">0542791272</a></p>
+                <p>💬 ديسكورد: <a href="https://discord.gg/ncs" target="_blank">انضم للسيرفر</a></p>
+            </div>
+        </section>
+
+        <section id="privacy" class="page-section hidden">
+            <h2>سياسة الخصوصية</h2>
+            <p>نحن نحترم خصوصيتك ولن نشارك معلوماتك مع أي جهة خارجية.</p>
+        </section>
+
+        <section id="terms" class="page-section hidden">
+            <h2>الشروط والأحكام</h2>
+            <p>باستخدامك لهذا الموقع، فإنك توافق على شروط الاستخدام التالية...</p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" onclick="showSection('privacy')">سياسة الخصوصية</a> |
+        <a href="#" onclick="showSection('terms')">الشروط والأحكام</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
